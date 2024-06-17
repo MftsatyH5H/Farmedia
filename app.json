@@ -4,7 +4,7 @@
     "slug": "Farmedia",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon.jpg",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -18,13 +18,26 @@
       "supportsTablet": true
     },
     "android": {
+      "plugins":[ [ "expo-build-properties", { "android": { "usesCleartextTraffic": true } } ] ],
+      "permissions": ["INTERNET"],
+      "usesCleartextTraffic": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.mftsatyh5h.Farmedia"
+    },
+    "packagerOpts": {
+      "hostType": "lan",
+      "lanType": "ip"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1910b565-9b27-421d-be2f-07c068f52d35"
+      }
     }
   }
 }
